@@ -23,10 +23,12 @@ import pypdf  # PDF processing library
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
+from langchain_community.chat_message_histories import ChatMessageHistory
+from langchain.memory import ConversationBufferMemory
 from langchain.memory import ConversationBufferWindowMemory  # For remembering conversation history
 from langchain.chains import ConversationalRetrievalChain  # For question-answering with context
 from langchain_openai import ChatOpenAI  # OpenAI's GPT models
-from langchain.callbacks import StreamlitCallbackHandler  # For displaying AI responses in real-time
+from langchain_community.callbacks import StreamlitCallbackHandler  # For displaying AI responses in real-time
 
 
 # ============================================================================
