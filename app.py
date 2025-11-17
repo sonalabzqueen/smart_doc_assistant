@@ -20,10 +20,17 @@ from typing import List, Dict, Any  # For better code documentation and type hin
 import streamlit as st
 import os
 import tempfile
+import pypdf
+
 from typing import List, Dict, Any
 
-from langchain_community.document_loaders import PyPDFLoader, TextLoader
-import pypdf
+import langchain
+import langchain_openai
+import langchain_community
+
+print(f"LangChain: {langchain.__version__}")
+print(f"LangChain OpenAI: {langchain_openai.__version__}")
+print(f"LangChain Community: {langchain_community.__version__}")
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
@@ -34,7 +41,7 @@ from langchain.memory import ConversationBufferWindowMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain_openai import ChatOpenAI
 from langchain_community.callbacks import StreamlitCallbackHandler
-
+from langchain_community.document_loaders import PyPDFLoader, TextLoader
 
 # ============================================================================
 # MAIN CLASS: SmartDocumentAssistant
