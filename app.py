@@ -17,7 +17,6 @@ import os  # For file and operating system operations
 import tempfile  # For creating temporary files
 from typing import List, Dict, Any  # For better code documentation and type hints
 
-# LangChain imports - The AI framework that powers our assistant
 from langchain_community.document_loaders import PyPDFLoader, TextLoader  # For reading PDF and text files
 import pypdf  # PDF processing library
 from langchain.text_splitter import RecursiveCharacterTextSplitter  # For breaking documents into smaller chunks
