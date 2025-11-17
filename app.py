@@ -17,18 +17,23 @@ import os  # For file and operating system operations
 import tempfile  # For creating temporary files
 from typing import List, Dict, Any  # For better code documentation and type hints
 
-from langchain_community.document_loaders import PyPDFLoader, TextLoader  # For reading PDF and text files
-import pypdf  # PDF processing library
+import streamlit as st
+import os
+import tempfile
+from typing import List, Dict, Any
+
+from langchain_community.document_loaders import PyPDFLoader, TextLoader
+import pypdf
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_core.memory import ConversationBufferMemory
-from langchain_core.memory import ConversationBufferWindowMemory
-from langchain.chains import ConversationalRetrievalChain  # For question-answering with context
-from langchain_openai import ChatOpenAI  # OpenAI's GPT models
-from langchain_community.callbacks import StreamlitCallbackHandler  # For displaying AI responses in real-time
+from langchain.memory import ConversationBufferMemory
+from langchain.memory import ConversationBufferWindowMemory
+from langchain.chains import ConversationalRetrievalChain
+from langchain_openai import ChatOpenAI
+from langchain_community.callbacks import StreamlitCallbackHandler
 
 
 # ============================================================================
