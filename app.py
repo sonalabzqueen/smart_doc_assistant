@@ -21,7 +21,7 @@ from langchain_community.document_loaders import PyPDFLoader, TextLoader  # For 
 import pypdf  # PDF processing library
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings  # For converting text into numerical vectors
+from langchain_openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS  # Database for storing and searching document vectors
 from langchain.memory import ConversationBufferWindowMemory  # For remembering conversation history
 from langchain.chains import ConversationalRetrievalChain  # For question-answering with context
