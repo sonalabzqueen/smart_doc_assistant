@@ -19,7 +19,8 @@ from typing import List, Dict, Any  # For better code documentation and type hin
 
 from langchain_community.document_loaders import PyPDFLoader, TextLoader  # For reading PDF and text files
 import pypdf  # PDF processing library
-from langchain.text_splitter import RecursiveCharacterTextSplitter  # For breaking documents into smaller chunks
+
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings  # For converting text into numerical vectors
 from langchain.vectorstores import FAISS  # Database for storing and searching document vectors
 from langchain.memory import ConversationBufferWindowMemory  # For remembering conversation history
