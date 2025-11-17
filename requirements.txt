@@ -1,10 +1,9 @@
-# requirements.txt
-#streamlit
+streamlit
 langchain
 langchain-openai
 langchain-community
 faiss-cpu
-pypdf2
+PyPDF2
 python-dotenv
 tiktoken
 chromadb
