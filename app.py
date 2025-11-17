@@ -22,7 +22,7 @@ import pypdf  # PDF processing library
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS  # Database for storing and searching document vectors
+from langchain_community.vectorstores import FAISS
 from langchain.memory import ConversationBufferWindowMemory  # For remembering conversation history
 from langchain.chains import ConversationalRetrievalChain  # For question-answering with context
 from langchain_openai import ChatOpenAI  # OpenAI's GPT models
