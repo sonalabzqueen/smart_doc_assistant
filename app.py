@@ -29,7 +29,6 @@ import langchain_openai
 import langchain_community
 
 print(f"LangChain: {langchain.__version__}")
-print(f"LangChain OpenAI: {langchain_openai.__version__}")
 print(f"LangChain Community: {langchain_community.__version__}")
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
