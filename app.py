@@ -14,7 +14,6 @@
 
 import streamlit as st  # Web framework for creating the user interface
 import os  # For file and operating system operations
-#from dotenv import load_dotenv  # For loading environment variables (API keys)
 import tempfile  # For creating temporary files
 from typing import List, Dict, Any  # For better code documentation and type hints
 
@@ -28,6 +27,7 @@ from langchain.memory import ConversationBufferWindowMemory  # For remembering c
 from langchain.chains import ConversationalRetrievalChain  # For question-answering with context
 from langchain_openai import ChatOpenAI  # OpenAI's GPT models
 from langchain.callbacks import StreamlitCallbackHandler  # For displaying AI responses in real-time
+
 
 # ============================================================================
 # MAIN CLASS: SmartDocumentAssistant
@@ -61,9 +61,7 @@ class SmartDocumentAssistant:
         self.chat_history = []  # List to store conversation history
         
         os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
-
-        # Check if OpenAI API key is available
-        # Without this key, we can't use OpenAI's AI models
+        
         if "OPENAI_API_KEY" not in os.environ:
             st.error("Please set your OpenAI API key in the .env file")
             st.stop()  # Stop the application if no API key
