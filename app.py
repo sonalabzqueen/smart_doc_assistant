@@ -242,10 +242,10 @@ class SmartDocumentAssistant:
             # 1. Search for relevant document chunks
             # 2. Combine with conversation history
             # 3. Generate answer
-            response = self.conversation_chain({
-                "question": question,
-                "callbacks": [callback_handler]  # For real-time streaming
-            })
+            response = self.conversation_chain(
+                {"question": question},
+                callbacks=[callback_handler]  # Pass as separate parameter
+            )
             
             return response
             
