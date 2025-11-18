@@ -521,7 +521,7 @@ if __name__ == "__main__":
             f.write("OPENAI_API_KEY=your_openai_api_key_here\n")
         st.warning("Please add your OpenAI API key to the .env file and restart the application.")
     
-    # Run the main application
+    # Run the main application from here
     main()
 
 
